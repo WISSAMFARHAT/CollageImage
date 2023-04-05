@@ -1,0 +1,45 @@
+﻿@inject IJSRuntime JS;
+@using Components.Model;
+
+@if (ListImages.Any())
+{
+    <section class="input">
+        <article>
+            <button @onclick="Save" class="--button _primary"><span>Screenshot</span></button>
+            <div>
+                <span>Add Title:</span>
+                <input type="text" @bind-value="Title" @bind-value:event="oninput" />
+            </div>
+            <div>
+                <label>
+                    <span>Display flex:</span>
+                    <input type="checkbox" @bind-value="@CheckDisplay" />
+                </label>
+                @if (!CheckDisplay)
+                {
+                    <input type="text" @bind-value="Coloumn" @bind-value:event="oninput"  />
+                    <input type="range" @bind="Coloumn" min="2" max="20"  />
+                }
+                else
+                {
+                    <input type="text" @bind-value="ColoumnFlex" @bind-value:event="oninput" />
+                }
+                
+            </div>
+        </article>
+    </section>
+    <section class="template">
+        <article id="template" style="@(CheckDisplay? $"--max:{ColoumnFlex*170 +100}px" : "--max:100%")">
+            <p class="template-title">@Title</p>
+            <div class="template-images" style="--c:@Coloumn;@(CheckDisplay? $"--display : flex;--max:{ColoumnFlex*170}px" : "--display:grid;--max:95%")">
+                @foreach (ImagesModel image in ListImages)
+                {
+                    <div class="image">
+                        <img src="@image.Url" alt="@image.Name" />
+                        <span>@image.Name</span>
+                    </div>
+                }
+            </div>
+        </article>
+    </section>
+}

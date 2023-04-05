@@ -1,0 +1,30 @@
+﻿@{
+    Html.Bundle("js/site.js");
+}
+
+<section class="home">
+    <article>
+        <div class="home-button">
+            <button id="upload" class="--button _primary">
+                <partial name="Asset/Upload" />
+                <span>
+                    Upload Files
+                </span>
+            </button>
+            <button id="clear" class="--button _red">
+                <partial name="Asset/Clear" />
+                <span>
+                    Clear
+                </span>
+            </button>
+        </div>
+
+        <form action="Upload" class="dropzone" id="myDropzone"></form>
+        
+        <a href="/template" class="--button _primary" id="template">
+            <span>Template View</span>
+        </a>
+         
+        
+    </article>
+</section>

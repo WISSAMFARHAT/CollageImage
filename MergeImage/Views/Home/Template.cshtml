@@ -1,0 +1,5 @@
+﻿@model List<ImagesModel>;
+@{
+    Html.Bundle("js/download.js");
+}
+<component type="typeof(Components.Pages.Images)" render-mode="ServerPrerendered" param-ListImages="@Model" />

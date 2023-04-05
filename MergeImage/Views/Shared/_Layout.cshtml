@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <component type="typeof(CloudHeadInit)" param-CloudPage="@(ViewData["CloudPageStatic"])" render-mode="Static" />
+</head>
+<body>
+    <partial name="Compoments/Header" />
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.0/html2canvas.min.js"></script>
+</body>
+</html>

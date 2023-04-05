@@ -1,0 +1,193 @@
+:root {
+  --primaryColor: #2e3191;
+  --primaryColorOpacity: #2e3191e6;
+  --secondaryColor: #42a7de;
+  --greyColor: #999FAE;
+  --redColor: #ed1c24;
+  --blackColor: #171717;
+  --whiteColor: #fff;
+  --primaryColorFaded: #42a7de4f;
+  --duration: 0.4s ease-in-out;
+  --headerHeight: 60px;
+  --headerbgColor: transparent;
+  --maxWidth: 1200px;
+  --TextColor: var(--blackColor);
+}
+body main .home {
+  min-height: 60vh;
+}
+body main .home > article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 400px;
+  max-width: 970px;
+  border-radius: 0.75em;
+  border: 1px solid #F2F2F2;
+  box-shadow: 0px 5px 16px -2px rgba(42, 115, 217, 0.2);
+  font-size: 1em;
+  padding: 1.6em 0;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+body main .home-button {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+body main .home a {
+  margin-top: 30px;
+  font-size: 1rem;
+  font-weight: normal;
+  max-width: 300px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+body main .home a > span {
+  text-transform: capitalize;
+}
+body main .home a._active {
+  pointer-events: auto;
+  opacity: 1;
+}
+body main #myDropzone {
+  margin-top: 20px;
+  width: 80%;
+  background-color: transparent;
+  border: 1px dashed var(--greyColor);
+  height: 200px;
+  text-align: center;
+  color: var(--greyColor);
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+}
+body main #myDropzone .remove {
+  color: var(--whiteColor);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+body main #myDropzone .remove:hover {
+  opacity: 0.8;
+}
+body main #myDropzone .dz-message {
+  width: 100%;
+}
+body main .input > article {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block: 50px 20px;
+}
+body main .input > article > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+body main .input > article > div > span {
+  font-size: 0.9rem;
+}
+body main .input input {
+  max-width: 300px;
+  padding: 5px;
+  border: 1px solid var(--primaryColor);
+  outline: none;
+  background-color: transparent;
+  color: var(--blackColor);
+  appearance: auto;
+}
+body main .template > article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*max-width: 600px;*/
+  margin-inline: auto;
+  padding-block: 30px;
+  max-width: var(--max);
+  min-height: var(--max);
+  padding: 5px;
+}
+body main .template-title {
+  color: var(--TextColor);
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 2rem;
+  margin-block: 50px;
+}
+body main .template-images {
+  display: var(--display);
+  align-items: baseline;
+  gap: 50px 20px;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(var(--c), 1fr);
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: flex-start;
+  padding-block: 20px;
+}
+body main .template-images .image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  max-width: 150px;
+}
+body main .template-images .image > img {
+  width: 100%;
+  object-fit: contain;
+}
+body main .template-images .image > span {
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: var(--TextColor);
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+body main .--button {
+  outline: none;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  width: 100%;
+  border: 1px solid var(--primaryColor);
+  background-color: transparent;
+  color: var(--primaryColor);
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+body main .--button:hover {
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+}
+@media print {
+  header,
+  .input {
+    display: none;
+  }
+  main {
+    padding-top: 0;
+    margin: 0;
+  }
+}
